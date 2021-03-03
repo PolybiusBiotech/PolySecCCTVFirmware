@@ -6,7 +6,8 @@ PlatformIO project for the artnet control of the PolySec CCTV
 This repo is built for the [platformIO](https://platformio.org/) ide and runs on a [lilygo poe esp32 board](https://www.tindie.com/products/ttgo/lilygor-ttgo-t-internet-poe-and-downloader-expansi/).
 
 
-## Artnet adresses
+## Artnet control
+### DMX addresses
 - 1 - Laser control - [0] Off, [1] On, [2-255] Strobing Slow to Fast
 - 2 - Pan
 - 3 - Pan Fine
@@ -24,6 +25,7 @@ Repeating till
 
 - 247,248,249 - RGB for led array pixel 15, bottom right
 
+### Pixel mapping
 Line pixels are arranged:
 
 66,65,64 ... 3,2,1
@@ -34,3 +36,9 @@ Array pixels are arranged:
 2|5|8|11|14
 3|4|9|10|15
 ```
+
+### Motion
+Pan: 180 degrees, 0 being full left, 180 full right
+
+Tilt: 90 degrees, 0 being out straight, 90 being straight down
+
